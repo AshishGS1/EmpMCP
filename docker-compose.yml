@@ -1,0 +1,24 @@
+services:
+  oracle:
+    image: gvenzl/oracle-free:23-slim
+    container_name: emp-oracle
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_SYS_PASSWORD:-OraclePwd#2026}
+      # Creates this user in the default PDB (FREEPDB1); init scripts run as this user
+      APP_USER: ${ORACLE_USER:-emp_app}
+      APP_USER_PASSWORD: ${ORACLE_PASSWORD:-EmpApp#2026}
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+      # *.sql files here run once, in filename order, on first container start
+      - ./sql:/container-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 60s
+
+volumes:
+  oracle-data:
