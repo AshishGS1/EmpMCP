@@ -14,7 +14,6 @@ this script just lets you exercise the server by hand. Issuer and audience defau
 AUTH_ISSUER / AUTH_AUDIENCE from the environment or .env.
 """
 
-from __future__ import annotations
 
 import argparse
 import os

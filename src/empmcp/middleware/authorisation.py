@@ -4,12 +4,8 @@ Scopes are enforced here instead of with FastMCP's per-tool ``auth=``. With that
 a caller lacking the scope gets "Unknown tool", which is hard to diagnose and cannot
 be logged as a 403 with the caller's identity. Here a denial is an explicit
 ``[403 PERMISSION_DENIED]`` naming the missing scope.
-
-Fails closed: with auth enabled, a tool missing from the policy map is not callable
-(this also means an unknown tool name answers 403, not 404).
 """
 
-from __future__ import annotations
 
 from typing import Iterable, Mapping
 

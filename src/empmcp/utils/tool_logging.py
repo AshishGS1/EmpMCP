@@ -1,6 +1,5 @@
 """One-line, grep-friendly tool-call logs in key=value style."""
 
-from __future__ import annotations
 
 import logging
 from http import HTTPStatus

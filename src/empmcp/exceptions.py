@@ -5,7 +5,6 @@ Every error subclasses fastmcp's ToolError, so when one is raised inside a tool
 being masked. The message is prefixed with the HTTP status and a stable code
 """
 
-from __future__ import annotations
 
 from typing import Any
 from http import HTTPStatus

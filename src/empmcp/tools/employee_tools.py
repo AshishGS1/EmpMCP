@@ -1,6 +1,5 @@
 """Employee MCP tools. Thin wrappers: no SQL and no business rules live here."""
 
-from __future__ import annotations
 
 from typing import Annotated
 

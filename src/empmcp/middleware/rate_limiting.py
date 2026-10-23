@@ -5,7 +5,6 @@ throttled. One limit is shared by every client (global scope). Rejected calls do
 not count against the window.
 """
 
-from __future__ import annotations
 
 from fastmcp.server.middleware.rate_limiting import (
     RateLimitError,

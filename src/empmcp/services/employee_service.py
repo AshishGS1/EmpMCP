@@ -6,7 +6,6 @@ Failure semantics:
                   unbounded request is an error (InvalidSearchCriteriaError)
 """
 
-from __future__ import annotations
 
 from typing import Any
 

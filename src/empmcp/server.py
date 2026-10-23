@@ -1,6 +1,5 @@
 """Builds the FastMCP server and runs it over streamable HTTP."""
 
-from __future__ import annotations
 
 import sys
 

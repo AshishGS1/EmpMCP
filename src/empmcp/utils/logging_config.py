@@ -6,7 +6,6 @@ call, and a handler filter stamps that id on every record logged meanwhile
 (service, database, ...), so one tool call can be traced across all its log lines.
 """
 
-from __future__ import annotations
 
 import json
 import logging

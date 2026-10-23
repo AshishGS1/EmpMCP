@@ -8,7 +8,6 @@ for failures the error code and type.
 Named request_logging.py rather than logging.py so it cannot shadow the stdlib.
 """
 
-from __future__ import annotations
 
 import time
 import uuid

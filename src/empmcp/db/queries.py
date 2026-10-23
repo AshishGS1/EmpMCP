@@ -4,7 +4,6 @@ All values must be passed as bind variables (``:name``), never formatted into th
 SQL string. Rows come back as dicts with lower-case column names.
 """
 
-from __future__ import annotations
 
 from typing import Any, Mapping
 

@@ -12,7 +12,6 @@ Tokens are RS256 JWTs signed by the FastAPI service. This server holds only the
 public key, so a compromised MCP server cannot mint tokens.
 """
 
-from __future__ import annotations
 
 import time
 import re
@@ -61,7 +60,7 @@ def identify_caller() -> Caller | None:
     )
 
 def identify_jti() -> str:
-    """The token's ``jti`` (FastAPI's request ID) for log correlation, or "-". Optional"""
+    """The token's jti (FastAPI's request ID) for log correlation, or "-". Optional"""
     token = get_access_token()
     value = (token.claims or {}).get("jti") if token else None
     if isinstance(value, str) and _JTI_RE.fullmatch(value):

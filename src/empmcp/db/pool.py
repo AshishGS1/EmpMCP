@@ -7,7 +7,6 @@ Lifecycle: ``init_pool`` on server startup, ``close_pool`` on shutdown (wired up
 through the FastMCP lifespan in server.py).
 """
 
-from __future__ import annotations
 
 from contextlib import asynccontextmanager
 from typing import AsyncIterator
