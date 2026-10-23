@@ -18,7 +18,7 @@ from empmcp.consts import INSTRUCTIONS
 @lifespan
 async def lifespan(_server: FastMCP):
     settings=get_settings()
-    await init_pool(settings)  # fail fast if Oracle is unreachable
+    await init_pool(settings) 
     try:
         yield
     finally:
@@ -41,7 +41,6 @@ def create_server(settings: Settings) -> FastMCP:
         instructions=INSTRUCTIONS,
         lifespan=lifespan,
         auth=auth,
-        # Unexpected exceptions are masked from clients
         mask_error_details=True,
     )
     register_all(mcp, settings)
